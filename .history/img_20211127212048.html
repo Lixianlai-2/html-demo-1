@@ -7,13 +7,16 @@
     <title>Document</title>
   </head>
   <body>
-    <img id="xxx" src="/美女x.png" alt="图片加载失败" />
+    <img id="xxx" src="/美女.png" alt="图片加载失败" />
 
     <script>
-      xxx.onload = function () {
+      const tupian = document.querySelector("img");
+
+      console.log(tupian);
+      tupian.onload = function () {
         console.log("图片加载成功");
       };
-      xxx.onerror = function () {
+      tupian.onerror = function () {
         console.log("图片加载失败");
         xxx.src = "404.png";
       };
